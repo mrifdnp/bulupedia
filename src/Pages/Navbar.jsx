@@ -17,7 +17,7 @@ function Navbar () {
           <a href="#" className="hover:text-[#FFDC26]">Pet Grooming</a>
           <a href="#" className="hover:text-[#FFDC26]">Pet Sitter</a>
           <a href="#" className="hover:text-[#FFDC26]">Pet Training</a>
-          <span className="ml-4 text-[#FFDC26]">+62 851-5692-6923 | 10.00 - 19.00</span>
+          <span className="ml-4 text-[#FFDC26]">22.11.5093 </span>
         </nav>
       </header>
     </>

@@ -23,8 +23,8 @@ const Hero = () => {
         {/* Tulisan di kanan */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-bold text-[#FFDC26]">
-            Be Glowing
-            <br />Be Cute
+           Mohamad Rifqi 
+            <br />Dani Putranto
           </h2>
           
           <p className="mt-2 text-sm max-w-md">
