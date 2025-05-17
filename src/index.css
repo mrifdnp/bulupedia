@@ -1,13 +1,17 @@
 @font-face {
   font-family: "Cocon";
-  src: url('../public//fonts/CoconRegularFont.otf')
+  src: url('/fonts/CoconRegularFont.otf')
 }
-
+@font-face {
+  font-family: "Product";
+  src: url('/fonts/ProductSans-Regular.ttf')
+}
 @import "tailwindcss";
 
 
 @theme {
   --font-cocon: "Cocon", "sans-serif";
+  --font-product: "Product";
   --breakpoint-3xl: 120rem;
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);
