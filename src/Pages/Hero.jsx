@@ -28,7 +28,7 @@ const Hero = () => {
           </h2>
           
           <p className="mt-2 text-sm max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis sed viverra posuere malesuada.
+            22.11.5093
           </p>
           <button className="mt-4 px-6 py-2 bg-[#FFDC26] hover:bg-yellow-500 text-white rounded-full shadow">
             Pelajari Selengkapnya
