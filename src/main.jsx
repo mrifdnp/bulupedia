@@ -10,7 +10,12 @@ import HowItWorks from './Pages/HowItWorks';
 import Testimonials from './Pages/Testimonials';
 import NewsLetter from './Pages/NewsLetter';
 import Footer from './Pages/Footer';
+import ReactGA from 'react-ga4';
 
+
+ReactGA.initialize('G-T5R2Z5S2VZ'); 
+ReactGA.send({ hitType: 'pageview', 
+  page: window.location.pathname  });
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className='font-cocon'><Navbar />
