@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -8,7 +9,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="flex justify-between items-center p-6 bg-white shadow-md font-cocon relative">
+      <header className="flex justify-between items-center p-6 bg-[white] shadow-md font-cocon relative">
         <h1 className="text-2xl text-[#FFDC26] relative">
           Bulu{" "}
           <span className="text-black relative inline-block">
@@ -20,13 +21,22 @@ function Navbar() {
         </h1>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-4 text-sm">
+        <nav className="hidden md:flex space-x-4 text-sm font-product items-center">
           <a href="#" className="hover:text-[#FFDC26]">Pet Clinic</a>
           <a href="#" className="hover:text-[#FFDC26]">Pet Hotel</a>
           <a href="#" className="hover:text-[#FFDC26]">Pet Grooming</a>
           <a href="#" className="hover:text-[#FFDC26]">Pet Sitter</a>
           <a href="#" className="hover:text-[#FFDC26]">Pet Training</a>
-          <span className="ml-4 text-[#FFDC26]">22.11.5093</span>
+          {/* Ganti span menjadi button */}
+       
+           <motion.button
+            className="ml-4 px-4 py-1 bg-gradient-to-r from-[#FFDC26] to-[#E0AF00] hover:from-yellow-500 hover:to-yellow-600 text-white rounded-full shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            Sign Up
+          </motion.button>
         </nav>
 
         {/* Hamburger for Mobile */}
@@ -35,6 +45,7 @@ function Navbar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+        
 
         {/* Sidebar */}
         <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 z-50 md:hidden`}>
@@ -49,7 +60,17 @@ function Navbar() {
             <a href="#" className="block hover:text-[#FFDC26]">Pet Grooming</a>
             <a href="#" className="block hover:text-[#FFDC26]">Pet Sitter</a>
             <a href="#" className="block hover:text-[#FFDC26]">Pet Training</a>
-            <span className="block text-[#FFDC26]">22.11.5093</span>
+            {/* Button Sign Up di sidebar */}
+        
+             <motion.button
+                        className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-[#FFDC26] to-[#E0AF00] hover:from-yellow-500 hover:to-yellow-600 text-white rounded-full shadow-lg"
+                        whileHover={{ scale: 1.05 }}
+                         onClick={closeSidebar}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                       Sign Up
+                      </motion.button>
           </div>
         </div>
 
