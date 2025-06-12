@@ -19,15 +19,13 @@ const testimonials = [
     name: "Saito Asuka",
     avatar: "/asuka.jpg",
     rating: 4.8,
-    comment:
-      "Pet hotel favorit! Anabulku selalu pulang dengan wajah happy!",
+    comment: "Pet hotel favorit! Anabulku selalu pulang dengan wajah happy!",
   },
   {
     name: "Tsutsui Ayame",
     avatar: "/ayame.jpg",
     rating: 4.7,
-    comment:
-      "Groomingnya keren, anabulku wangi banget dan bulunya halus!",
+    comment: "Groomingnya keren, anabulku wangi banget dan bulunya halus!",
   },
 ];
 
@@ -40,7 +38,9 @@ const Testimonial = () => {
   };
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setActiveIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
@@ -49,15 +49,20 @@ const Testimonial = () => {
         {/* LEFT: Testimonial */}
         <div>
           <p className="text-sm text-yellow-500 font-medium mb-1">Our Review</p>
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">What They Say ?</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            What They Say ?
+          </h3>
 
           {/* Avatar + Info */}
           <div className="flex items-center gap-4 mb-2">
             <img
               src={active.avatar}
               alt={active.name}
+              width={64}
+              height={64}
               className="w-16 h-16 rounded-full object-cover"
             />
+
             <div className="text-left">
               <p className="font-semibold">{active.name}</p>
               <div className="flex items-center gap-1 text-yellow-400 text-sm">
@@ -69,7 +74,9 @@ const Testimonial = () => {
           </div>
 
           {/* Comment */}
-          <p className="italic text-gray-700 text-base mb-6">“ {active.comment} ”</p>
+          <p className="italic text-gray-700 text-base mb-6">
+            “ {active.comment} ”
+          </p>
 
           {/* Carousel */}
           <div className="flex items-center gap-3">
@@ -86,7 +93,9 @@ const Testimonial = () => {
                 alt={`reviewer-${i}`}
                 onClick={() => setActiveIndex(i)}
                 className={`w-10 h-10 rounded-full object-cover cursor-pointer transition-all ${
-                  i === activeIndex ? "ring-2 ring-yellow-400 scale-110" : "opacity-70"
+                  i === activeIndex
+                    ? "ring-2 ring-yellow-400 scale-110"
+                    : "opacity-70"
                 }`}
               />
             ))}
