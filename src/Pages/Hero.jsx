@@ -12,7 +12,7 @@ const Hero = () => {
     }
   };
   return (
-    <section className="py-10 bg-white">
+    <section className="py-10 bg-[#FFFFF0]">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-0">
         {/* Bagian gambar dan box */}
         <div className="md:w-1/2 mb-6 md:mb-0 flex justify-center md:justify-start relative">

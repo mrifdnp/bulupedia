@@ -20,16 +20,16 @@ const Services = () => {
         {services.map((service) => (
           <div
             key={service.name}
-            className="flex flex-col items-center w-28"
+            className="flex flex-col items-center w-28 group cursor-pointer"
           >
-            <div className="bg-white rounded-full w-24 h-24 flex items-center justify-center shadow-md">
+            <div className="bg-white rounded-full w-24 h-24 flex items-center justify-center shadow-md transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg">
               <img
                 src={service.icon}
                 alt={service.name}
                 className="w-12 h-12 object-contain"
               />
             </div>
-            <span className="mt-3 font-medium text-sm text-gray-700">
+            <span className="mt-3 font-medium text-sm text-gray-700 transition-colors duration-300 group-hover:text-[#FFDC26]">
               {service.name}
             </span>
           </div>

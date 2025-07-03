@@ -24,7 +24,9 @@ createRoot(document.getElementById('root')).render(
     <Services />
     <HowItWorks />
     <Testimonials />
+     <NewsLetter />
     <Footer />
+   
     </div>
     
   </StrictMode>,

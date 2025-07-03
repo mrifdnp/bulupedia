@@ -1,16 +1,27 @@
-import React from 'react'
+import React from "react";
+import { Instagram } from "lucide-react"; // pastikan lucide-react terinstal
 
-const NewsLetter = () => {
+const FollowInstagram = () => {
   return (
-    <section className="py-10 px-6 text-center">
-    <h3 className="text-xl font-semibold mb-2">Subscribe Our Newsletter</h3>
-    <p className="text-sm mb-4">Banyak promo yang tersedia khusus untuk kamu, gak mau ketinggalan? Yuk ikut berlangganan gratis!</p>
-    <div className="flex justify-center">
-      <input type="email" placeholder="Enter your email address" className="px-4 py-2 border rounded-l-full focus:outline-none" />
-      <button className="px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-white rounded-r-full">Berlangganan</button>
-    </div>
-  </section>
-  )
-}
+    <section className="py-12 px-6 text-center bg-gray-50">
+      <h3 className="text-2xl font-bold mb-3 text-gray-800">Follow Instagram Kami</h3>
+      <p className="text-sm text-gray-600 mb-6 max-w-lg mx-auto">
+        Dapatkan update terbaru dan promo menarik lainnya langsung dari Instagram kami!
+      </p>
 
-export default NewsLetter
+      <div className="flex items-center justify-center gap-3">
+        <a
+          href="https://instagram.com/bulupedia" // Ganti dengan link akun Instagram kamu
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center bg-[#FFDC26] hover:bg-yellow-400 text-white font-medium px-6 py-2 rounded-full shadow transition duration-300"
+        >
+          <Instagram className="mr-2 w-5 h-5" />
+          Kunjungi Instagram
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default FollowInstagram;
